@@ -1,0 +1,41 @@
+#include<iostream>
+
+using namespace std;
+
+long double fib(long double f);
+
+int main()
+{
+    //ciag fibonacciego
+
+    long double n;
+
+        cout << "Do ktorego wyrazu ciagu chcesz go wyswietlic: ";
+
+        cin >> n;
+
+        fib(n);
+
+
+	return 0;
+}
+
+    long double fib(long double f)
+{
+
+    long double p=0, d=1;
+
+    for(int i=1; i<f; i++)
+
+        {
+
+            p=p+d;
+            d=p-d;
+
+        if(d==0) cout << "";
+            else cout << d << " ";
+
+        }
+
+    return 0;
+}
