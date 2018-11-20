@@ -2,19 +2,12 @@
 
 using namespace std;
 
-int tab[1000];
+double tab[1000];
 
 void f(int x);
 
 int main()
 {
-    int a=1;
-     for(int i=1; i<1000; i++)
-       {
-        tab[i] = a*2;
-        a = a*2;
-       }
-
     int y;
     cin >> y;
     f(y);
@@ -24,18 +17,16 @@ int main()
 
 void f(int x)
 {
-    int a=1;
+    int a=2;
      for(int i=1; i<1000; i++)
        {
-        tab[i] = a*2;
+        tab[i] = a;
         a = a*2;
        }
 
     for(int i=1; i<10000; i++)
     {
-    if(tab[i] != x+1);
     if(tab[i] == x+1) cout << "liczba ta jest zgodna dla n = 2^" << i;
     if(tab[i] == x+1) break;
     }
-
 }
