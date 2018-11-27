@@ -1,0 +1,60 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int f(int x);
+
+int main()
+{
+    double a = 2, b = 17, n = 5, dl, p, ab;
+    dl = (b-a)/n;
+
+
+
+    for(int i=1; i<n; i++)
+    {
+        p = p +  f(a+(i*dl));
+        cout << "\t" << f(a+(i*dl)) << "\t" << p << "  dl: " << dl  << " a: " << a << " b: " << b << " n: " << n <<endl;
+    }
+
+    ab = ((f(a))/2) + ((f(b))/2);
+    p = (p+ab)*dl;
+
+    cout << "\n ab: " << ab;
+
+    cout << "\n\t" << p;
+
+
+  return 0;
+}
+
+int f(int x)
+{
+    return x+3;
+}
+
+
+
+
+/*
+int main()
+{
+    double a = 1, b = 13, n = 3, dl, p;
+    dl = (b-a)/n;
+
+    for(int i=0; i<n; i++)
+    {
+        p = p + dl * f(a+(i*dl)+(dl/2));
+        cout << i+1 << "\t" << dl * f(a+(i*dl)+(dl/2)) << "\t" << p <<endl;
+    }
+
+  return 0;
+}
+
+int f(int x)
+{
+    return (x*x)+(2*x)-1;
+}
+*/
